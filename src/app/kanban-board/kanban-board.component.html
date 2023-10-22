@@ -1,0 +1,16 @@
+<!-- Import Angular Material modules -->
+<!-- <div class="kanban-container" fxLayout="row">
+    <div class="kanban-column" fxFlex="25%" *ngFor="let column of columns; let i = index">
+        <h3>{{column.name}}</h3>
+        <mat-card class="kanban-card" *ngFor="let card of column.cards">
+            {{ card.id + ' - ' + card.name }}
+        </mat-card>
+        <button mat-button-raised color="primary" (click)="newTask($event, i)">New Task</button>
+    </div>
+</div>
+ -->
+<div class="resizable-square" cdkDrag (cdkDragStarted)="onDragStarted()" (cdkDragEnded)="onDragEnded($event)"
+    cdkDragBoundary=".board-container">
+    <div class="square" cdkDragHandle cdkDrag (cdkDragStarted)="onResizeStarted()" (cdkDragEnded)="onResizeEnded()">
+    </div>
+</div>
